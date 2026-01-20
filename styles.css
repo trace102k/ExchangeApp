@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(220deg, #b8e994, #079992, #eb2f06, #4a69bd, #b71540);
+    background-size: 300% 300%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation: move-bg 13s linear infinite;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    height: 160px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    opacity: 80%;
+}
+.title {
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.comparison-info {
+    margin-top: 20px;
+    font-size: 40px;
+    text-shadow: 10px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+.controls-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.select-control {
+    font-size: 16px;
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 20px;
+    border: none;
+}
+.select-control:hover {
+    box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+}
+.swap-btn {
+    width: 100px;
+    height: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition: 0.5s;
+    background: rgba(255,255,255,0.3);
+}
+
+.swap-btn:hover {
+        box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.6);
+        transition: 0.5s;
+}
+.swap-btn:active {
+    background-color: rgb(215, 215, 215);
+    color: black;
+}
+.input-control {
+    width: 100%;
+    font-size: 20px;
+    height: 40px;
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.5);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.input-control:focus-visible {
+    box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+}
+
+@keyframes move-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
